@@ -6,13 +6,47 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>My First Web site</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS102</title>
+        <style>
+            h1 {
+                background-color:bisque;
+                color:blueviolet;
+                font-family: monospace;
+                text-align: center;
+            }
+            h2 {
+                font-family:serif;
+                font-size: 2em;
+                color: gold;
+                background-color: silver;
+            }
+            body {
+               background-color:antiquewhite;
+            }
+            h2#first {
+                color:red;
+            }
+            .h1h2 {
+                background-color: blueviolet;
+            }
+           #org {
+               left:45%; 
+               top:45%;
+               border: blue}
+        </style>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-    <body text="#289FA8" bgcolor ="#E1C9B9"> 
-        <h1><font face="verdana" color="#411679">Welcome to my web page :)</font> </h1>
-    I will share <h3> my biography, my hobbies </h3> here.
-    <p> This is <em> <strong> my travel guide </strong> </em></p>
+    <body> 
+        <table id="org"> <tr> <td> <h1>Welcome to my web page:) </h1>
+        I will share 
+        <h2 id="first"> my biography </h2>
+        and
+        <h2 class="h1h2" align="right">  my hobbies </h2>
+        
+        here.
+    <p> This is my travel guide </p> </td> </tr> <table> 
+        
+        
     </body>
 </html>
