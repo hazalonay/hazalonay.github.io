@@ -6,153 +6,149 @@ and open the template in the editor.
 -->
 <html>
     <head>
-       
-    <title> My Travel Guide</title>
+    <title>JOURNEY PLAN</title>
     <style>
-        h1 {
-            background: aliceblue;
-            color:maroon;
-            font-family: cursive;
+       
+        body{
             text-align: center;
-            font-size:xx-large;
+            background-size: cover;
+            z-index: 1;
         }
-        body {
-            background-color: aliceblue;
-        }
-            
-        h2#first {
-            background-color: aliceblue;
-            color: lightseagreen;
-            font-family:cursive;
-            text-align: center;
-            font-size: x-large;
-        }
-        .h1h2 {
-            background-color:bisque;
-            color: crimson;
-            font-family: sans-serif;
-            text-align: right;
-            
-        }
-        table{
-            text-align: center;
-            font-size: 70%;
-            width: 100%;
-            
-        }
-        tr{
-            width: 70px;
-            height: 100px;
-                       
-            
+              
         
-        }
-        td {
-            width: 70px;
-            height: 100px;
+        h1{
+            color:midnightblue;
+            text-align:center;
+            font-size: xx-large;
+            font-family:inherit;
            
         }
-        p#first {
-            text-align: center;
-            color:maroon;
+        .class1{
+           position: fixed;
+                     top:7%;
+                      left:45%;
+                      margin: 1%;
+                     padding: 1%;
+                    
+                     z-index: 3;
+                     
+        
+        }
+        input {
+            border-color: darkred;
+            border:1px;
+            color:brown;
+            background-color: bisque;
+            opacity: 0.75;
+        }
+        radio {
+            background-color: bisque;
+            opacity: 0.75;
+            color: brown;
+        }
+        select {
+            background-color: bisque;
+            opacity: 0.75;
+            color: brown;
+        }
+        textarea {
+            background-color: bisque;
+            opacity: 0.75;
+            color:brown;
+        }
+        h2 {
+            color:darkred;
+            font-size: medium;
+          
             
         }
-        p#second{
-            text-align: center;
-            color:maroon;
+       .first {
+            opacity: 1;
+            color:  crimson;
+            background-color: beige;
         }
+       
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body background="http://d1zlh37f1ep3tj.cloudfront.net/wp/wblob/54592E651337D2/17F2/273DA2/EptXfMQV2NJ71RMfjKxbFg/how-to-quit-your-job.jpg" > 
+    <embed src="5.mp3" hidden="true" autoostart="true" loop="-1">
+    <h1> Fill Out The Form For Hotel Booking </h1>
+<div class="class1">
     
-    <h1> Welcome My Travel Guide
-         </h1>
+    <h2>
+       
+    <table > 
+        <tr> 
+          
+            <td>
+    <form action="" name="f1" id="f1">
+        First Name: <br>
+        <input type="text" name="first name"> <br>
+            Last Name: <br>
+            <input type="text" name="last name">
+            
     
+         <p> Gender: </p> 
+           
+        <select name="gender"> 
+           
+            <option value="female"> Female </option>
+            <option value="male"> Male </option> <br> </select>
+    
+            <p> E-mail: </p>
+        <input type="email" name="email"> 
+            
+            <p> Phone: </p>
+            <input type="tel" name="usrtel"> <br> <br> 
+                
+                <p> Address: </p>
+                    <textarea name="address" rows="10" cols="30"> Please write your address...
+                    </textarea> <br>
+                                 
+                    </td> 
+                  
         
-        <h2 id="first"> I want to show you the wonders of world </h2>
-                   
-        <h2 class="h1h2"> <table border="1">
-            <tr>
-            <td>
-                NEW YORK 
-                        </td>
-                        <td> 
-                            <p id="first">General Information about NYC </p>
-                                <p> Buzzing NYC is one of the highlights of New York State, 
-                                but beyond this mega city lie fine beaches, forested mountains, 
-                                pretty towns and bountiful historical attractions.</p></td>
-                        <td>
-                            <p id="second"> Must-see in NYC<br> </p>
-                             <p> From Times Square <br> 
-                            Central Park<br> 
-                            the Empire State Building<br> 
-                            One World Observatory<br> 
-                            Statu of Liberty<br> 
-                            the island of Manhattan <br> 
-                            Brooklyn<br> </p>
-                           
-                            . 
-                                      </td>
-        
-        <tr>
-            <td> CUBA </td>
-            <td>
-                <p id="first">General Information about CUBA </p>
-                        <p> Able to both confound and exceed expectations in equal measure,
-                Cuba is an endlessly fascinating place. 
-                The archetypal tableau of revolutionary rhetoric, 
-                breathtaking beaches, 
-                classic cars gliding past faded colonial buildings and a population
-                who dance on an endless ribbon of salsa and rum does of course exist. </p>
-            </td>
+                    <td>
                     
-            <td>
-                <p id="second"> Must-see in CUBA<br> </p>
-                <p> Havana <br>
-                Santa Clara <br>
-                Veradero <br>
-                Trinidad <br>
-                Artemisa <br>
-                Pinar del Río <br>
-                </p>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                BALI
-            </td>
-            <td> <p id="first">General Information about BALI </p>
+                <p> Hotel's Area </p>
+              <select name="area"> 
+                  <option value="NEW YORK"> NEW YORK </option>
+                  <option value="NEW YORK">CUBA </option>
+                  <option value="NEW YORK"> BALI </option>
+                        </select>
                 
-                <p> Bali, the famed Island of the Gods, 
-                with its varied landscape of hills and mountains, 
-                rugged coastlines and sandy beaches, 
-                lush rice terraces and barren volcanic hillsides all providing a picturesque backdrop to its colourful, 
-                deeply spiritual and unique culture, 
-                stakes a serious claim to be paradise on earth. 
-                With world-class surfing and diving, 
-                a large number of cultural, historical and archaeological attractions,
-                and an enormous range of accommodations, 
-                this is one of the world's most popular island destinations and one which consistently wins travel awards. </p>
-                      
-            </td>
-            <td> <p id="second"> Must-see in BALI<br> </p>
-                Kintamani and Mount Batur  <br>
-                Besakih Temple<br>
-                Tanah Lot Temple<br>
-                Tegallalang Rice Terraces<br>
-                Ubud Monkey Forest<br>
+                            <p> Guest Number:</p>
+                <input type="number" name="quantity" min="1" max="10"> <br> <br>
+                    
+                    <p> Room Type: </p>
+                    <select name="room">
+                         <br>
+             <option value="1 room, 1 guest"> 1 Room, 1 Guest</option>
+             <option value=" 1 room, 2 guest"> 1 Room, 2 Guest </option> <br> </select> 
+                      <table> 
+                    <tr><td>                       
+                <p> Arrival Date </p>
+                    <input type="date" name="day"> </td>
+                    <td> <p> Leaving Date </p>
+                    <input type="date" name="day"> </td>
+                        </tr> </table> <br>
                 
-            </td>
-              </tr>
+                
+                <input type="radio" name="event" value="entertainment" > Entertainment
+                    <input type="radio" name="event" value="business" > Business <br>
+                        </td>
+                        </tr>
+                        </table>
             
-            
-                      
-        
-    </table>
-</h2>
-    
+    </h2>
+    <h2 id="first">
+
+        <input type="submit" value="PROCESS RESERVATION" type="button"onclick="alert('YOUR PROCESS HAS BEEN COMPLETED.')"> 
+                    
+    </h2>
+       </form>
+</div>
 </body>
 </html>
