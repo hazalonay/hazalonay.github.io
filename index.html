@@ -24,11 +24,13 @@ and open the template in the editor.
             text-align:center;
             font-size: xx-large;
             font-family:inherit;
-           
+           position: relative;
+           top:1%;
+              
         }
         .class1{
            position: fixed;
-                     top:7%;
+                     top:6%;
                       left:45%;
                       margin: 1%;
                      padding: 1%;
@@ -61,8 +63,7 @@ and open the template in the editor.
         }
         h2 {
             color:darkred;
-            font-size: medium;
-          
+            font-size: small;
             
         }
        .first {
@@ -70,13 +71,42 @@ and open the template in the editor.
             color:  crimson;
             background-color: beige;
         }
+        #inner {
+            cursor: pointer;
+            
+        }
+        #outer {
+            background-color: bisque;
+            opacity: 0.75;
+        }
+        #inner1 {
+            cursor: pointer;
+            
+        }
+        #outer1 {
+            background-color: bisque;
+            opacity: 0.75;
+        }
+        #inner2 {
+            cursor: pointer;
+            clear: both;
+            vertical-align: middle
+            
+        }
+        #outer2 {
+            background-color: bisque;
+            opacity: 0.75;
+        }
+      
        
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <meta charset="UTF-8">
+    <a href="../../7474html.html"></a>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body background="http://d1zlh37f1ep3tj.cloudfront.net/wp/wblob/54592E651337D2/17F2/273DA2/EptXfMQV2NJ71RMfjKxbFg/how-to-quit-your-job.jpg" > 
-    <embed src="5.mp3" hidden="true" autoostart="true" loop="-1">
+    <embed src="5.mp3" hidden="true" autoostart="true" loop="true">
     <h1> Fill Out The Form For Hotel Booking </h1>
 <div class="class1">
     
@@ -121,6 +151,84 @@ and open the template in the editor.
                   <option value="NEW YORK">CUBA </option>
                   <option value="NEW YORK"> BALI </option>
                         </select>
+                <br> <br>
+                                <div id="outer">
+            <span id="inner">
+                To Investigate NYC
+                
+                
+            </span>
+        </div>
+        <script>
+            $('#inner').hover(
+                function() {
+                    $(this).css('background-color',"bisque");
+                }, 
+                function() {
+                    $(this).css("background-color","darkorange");
+                }
+            );
+    
+            $('#inner').click(
+                function() {
+                    window.location = "http://www.nycgo.com/";
+                    
+                    
+                }
+            );
+        </script>
+                         
+                                <div id="outer1">
+            <span id="inner1">
+                To Investigate CUBA
+                
+                
+            </span>
+        </div>
+        <script>
+            $('#inner1').hover(
+                function() {
+                    $(this).css('background-color',"bisque");
+                }, 
+                function() {
+                    $(this).css("background-color","darkorange");
+                }
+            );
+    
+            $('#inner1').click(
+                function() {
+                    window.location = "http://www.roughguides.com/destinations/central-america-and-the-caribbean/cuba/";
+                    
+                    
+                }
+            );
+        </script>
+                    <div id="outer2">
+            <span id="inner2">
+                To Investigate BALI
+                
+                
+            </span>
+        </div>
+        <script>
+            $('#inner2').hover(
+                function() {
+                    $(this).css('background-color',"bisque");
+                }, 
+                function() {
+                    $(this).css("background-color","darkorange");
+                }
+            );
+    
+            $('#inner2').click(
+                function() {
+                    window.location = "http://www.baliguide.com/";
+                    
+                    
+                }
+            );
+        </script>
+                         
                 
                             <p> Guest Number:</p>
                 <input type="number" name="quantity" min="1" max="10"> <br> <br>
@@ -142,7 +250,8 @@ and open the template in the editor.
                     
                       <table> 
                           
-                    <tr><td>                       
+                    <tr>
+                        <td>                       
                 <p> Arrival Date </p>
                     <input type="date" name="day"> </td>
                     <td> <p> Leaving Date </p>
@@ -152,7 +261,10 @@ and open the template in the editor.
                 
                 <input type="radio" name="event" value="entertainment" > Entertainment
                     <input type="radio" name="event" value="business" > Business <br>
+            
+                            
                         </td>
+                                               
                         </tr>
                         </table>
             
