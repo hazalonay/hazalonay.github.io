@@ -1,280 +1,111 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        
-    <title>JOURNEY PLANNING</title>
-    
-    <link rel="icon" href="favicon.ico" type="image/jpg" sizes="16x16"> 
-    <style>
-       
-        body{
+        <title>MATH</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <style>
+            
+            body{
+                background-size: cover;
+            }
+            h1 {
+                color: antiquewhite;
+                text-align: center;
+                font-size: xx-large;
+                font-family: monospace;
+            }
+            h2 {
+                color:antiquewhite;
+                font-size: x-large;
+            }
+            textarea {
+            background-color: lightgray;
+            opacity: 0.75;
+            color: crimson;
+            font-family:  inherit;
             text-align: center;
-            background-size: cover;
-            z-index: 1;
-        }
-              
-        
-        h1{
-            color:midnightblue;
-            text-align:center;
-            font-size: xx-large;
-            font-family:inherit;
-           position: relative;
-           top:1%;
-              
-        }
-        .class1{
-           position: fixed;
-                     top:6%;
-                      left:45%;
-                      margin: 1%;
-                     padding: 1%;
-                    
-                     z-index: 3;
-                     
-        
-        }
-        input {
-            border-color: darkred;
-            border:1px;
-            color:brown;
-            background-color: bisque;
-            opacity: 0.75;
-        }
-        radio {
-            background-color: bisque;
-            opacity: 0.75;
-            color: brown;
-        }
-        select {
-            background-color: bisque;
-            opacity: 0.75;
-            color: brown;
-        }
-        textarea {
-            background-color: bisque;
-            opacity: 0.75;
-            color:brown;
-        }
-        h2 {
-            color:darkred;
-            font-size: small;
-            
-        }
-       .first {
-            opacity: 1;
-            color:  crimson;
-            background-color: beige;
-        }
-        #inner {
-            cursor: pointer;
-            
-        }
-        #outer {
-            background-color: bisque;
-            opacity: 0.75;
-        }
-        #inner1 {
-            cursor: pointer;
-            
-        }
-        #outer1 {
-            background-color: bisque;
-            opacity: 0.75;
-        }
-        #inner2 {
-            cursor: pointer;
-            clear: both;
-            vertical-align: middle
-            
-        }
-        #outer2 {
-            background-color: bisque;
-            opacity: 0.75;
-        }
-      
-       
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <meta charset="UTF-8">
-    <a href="../../7474html.html"></a>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body background="http://d1zlh37f1ep3tj.cloudfront.net/wp/wblob/54592E651337D2/17F2/273DA2/EptXfMQV2NJ71RMfjKxbFg/how-to-quit-your-job.jpg" > 
-    <embed src="5.mp3" hidden="true" autoostart="true" loop="true">
-    <h1> Fill Out The Form For Hotel Booking </h1>
-<div class="class1">
-    
-    <h2>
-       
-    <table > 
-        <tr> 
-          
-            <td>
-    <form action="" name="f1" id="f1">
-        First Name: <br>
-        <input type="text" name="first name"> <br>
-            Last Name: <br>
-            <input type="text" name="last name">
-            
-    
-         <p> Gender: </p> 
-           
-        <select name="gender"> 
-           
-            <option value="female"> Female </option>
-            <option value="male"> Male </option> <br> </select>
-    
-            <p> E-mail: </p>
-        <input type="email" name="email"> 
-            
-            <p> Phone: </p>
-            <input type="tel" name="usrtel"> <br> <br> 
-                
-                <p> Address: </p>
-                    <textarea rows="10" cols="30" placeholder="Please write your address..."> Please write your address...
-                    </textarea> <br>
-                                 
-                    </td> 
-                  
-        
-                    <td>
-                    
-                <p> Hotel's Area </p>
-              <select name="area"> 
-                  <option value="NEW YORK"> NEW YORK </option>
-                  <option value="NEW YORK">CUBA </option>
-                  <option value="NEW YORK"> BALI </option>
-                        </select>
-                <br> <br>
-                                <div id="outer">
-            <span id="inner">
-                To Investigate NYC
-                
-                
-            </span>
-        </div>
-        <script>
-            $('#inner').hover(
-                function() {
-                    $(this).css('background-color',"darkorange");
-                }, 
-                function() {
-                    $(this).css("background-color","bisque");
-                }
-            );
-    
-            $('#inner').click(
-                function() {
-                    window.location = "http://www.nycgo.com/";
-                    
-                    
-                }
-            );
-        </script>
-                         
-                                <div id="outer1">
-            <span id="inner1">
-                To Investigate CUBA
-                
-                
-            </span>
-        </div>
-        <script>
-            $('#inner1').hover(
-                function() {
-                    $(this).css('background-color',"darkorange");
-                }, 
-                function() {
-                    $(this).css("background-color","bisque");
-                }
-            );
-    
-            $('#inner1').click(
-                function() {
-                    window.location = "http://www.roughguides.com/destinations/central-america-and-the-caribbean/cuba/";
-                    
-                    
-                }
-            );
-        </script>
-                    <div id="outer2">
-            <span id="inner2">
-                To Investigate BALI
-                
-                
-            </span>
-        </div>
-        <script>
-            $('#inner2').hover(
-               function() {
-                    $(this).css('background-color',"darkorange");
-                }, 
-                function() {
-                    $(this).css("background-color","bisque");
-                }
-            );
-    
-            $('#inner2').click(
-                function() {
-                    window.location = "http://www.baliguide.com/";
-                    
-                    
-                }
-            );
-        </script>
-                         
-                
-                            <p> Guest Number:</p>
-                <input type="number" name="quantity" min="1" max="10"> <br> <br>
-                    
-                    <p> Room Type: </p>
-                    <select name="room">
-                         <br>
-             <option value="1 room, 1 guest"> 1 Room, 1 Guest</option>
-             <option value=" 1 room, 2 guest"> 1 Room, 2 Guest </option> <br>  
-                    <option value=" 1 room, 3 guest"> 1 Room, 3 Guest </option> <br>
-                    <option value=" 1 room, 4 guest"> 1 Room, 4 Guest </option> <br>
-                    <option value=" 1 room, 5 guest"> 1 Room, 5 Guest </option> <br>
-                    <option value=" 1 room, 6 guest"> 1 Room, 6 Guest </option> <br>
-                    <option value=" 1 room, 7 guest"> 1 Room, 7 Guest </option> <br>
-                    <option value=" 1 room, 8 guest"> 1 Room, 8 Guest </option> <br>
-                    <option value=" 1 room, 9 guest"> 1 Room, 9 Guest </option> <br>
-                    <option value=" 1 room, 10 guest"> 1 Room, 10 Guest </option> <br>
-                    </select>
-                    
-                      <table> 
-                          
-                    <tr>
-                        <td>                       
-                <p> Arrival Date </p>
-                    <input type="date" name="day"> </td>
-                    <td> <p> Leaving Date </p>
-                    <input type="date" name="day"> </td>
-                        </tr> </table> <br>
-                
-                
-                <input type="radio" name="event" value="entertainment" > Entertainment
-                    <input type="radio" name="event" value="business" > Business <br>
-            
+            font-size: medium;
+            top:1%;
+            }
                             
-                        </td>
-                                               
-                        </tr>
-                        </table>
+            button {
+            background-color: lightgray;
+            opacity: 0.75;
+            color:darkred;
+                            }
+                            
+        </style>
+        
+        <script>
+            function myfunction () {
+                var res=0; 
+                var n=9;
+                for ( var i=1; i<=n ; i++) {
+                    res= res + (i*i+i*i*i);
+                }
+                return res;
+            }
+        </script>
+        
+        <script>
+            function multiplication () {
+                var res=1;
+                var j=10;
+                var n=10;
+                document.write("MULTIPLICATION TABLE")
+                document.write("<table border=1 cellspacing=0 cellpadding=2 background='jj2.jpg' background-size=cover>");
+                for ( var i=1; i<=n; i++ ) {
+                    document.write("<tr>");
+                     for (var j=1; j<=10; j++) {
+                   res = i*j;
+                   document.write("<td  style='width: 500px;height:60px; color:white; '>" + i + "*" + j + "=" + i * j + "<br/>");
+                   document.write ("</tr");
+                   document.write ("</table>");
+                }
+                } }
+            </script>
+    </head>
+    <body background='http://wallpaperswa.com/thumbnails/detail/20120716/love%20mathematics%20hearts%20black%20background%201024x768%20wallpaper_wallpaperswa.com_22.jpg'>
+        <h1> ANSWER THE FOLLOWING QUESTION </h1>
+        <div>
+            <form>
+                <h2> 1-  </h2> <textarea  rows="3" cols="50" disabled='true'> What is the sum of squares and cubes of numbers from 1 to 10 ?
+                
+                </textarea>
+<!--                       <input type="text" id="n" value="9"/> -->
+                <input type="text" id="res" placeholder="Here goes the result"  style='width: 200px; color: darkred; background-color: lightgrey;' />
+                <button type='button' style='color: darkred; background-color: lightgrey; opacity: 0.75'
+                        
+                       onclick="calculate();"
+                        >
+                       check your answer </button>
+                
+            </form>
+            <form>
+                
+                <button type='button' style="top: 45%; margin:5%; position: fixed; color: darkred; background-color: lightgrey; opacity:0.75" 
+                       
+                       onclick="multiply();">
+                       check your multiplication table </button>
+            </form>
+        </div>
+        <script>
+            function calculate() {
+                
+                var res = myfunction();
+                $('#res').val(res);
+            }            
             
-    </h2>
-    <h2 id="first">
-
-        <input type="submit" value="PROCESS RESERVATION" type="button"onclick="alert('YOUR PROCESS HAS BEEN COMPLETED.')"> 
-                    
-    </h2>
-       </form>
-</div>
-</body>
+        </script>
+    <script>
+            function multiply() {
+                
+                var res = multiplication();
+                $('#res').val(res);
+            }            
+            
+        </script>
+    </body>
 </html>
