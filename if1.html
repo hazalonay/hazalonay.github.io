@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+    <title>CALCULATE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            position: fixed;
+            top:25%;
+            margin:5%;
+            left:15%;
+            background-color: black;
+        }
+        h1 {
+            font-style: oblique;
+            font-size: xx-large;
+            text-align: center;
+            color: crimson;
+                
+        }
+        #input1 {
+            background-color: crimson;
+            
+            font-style: oblique;
+            font-size: large;
+        }
+        #input2 {
+         background-color: crimson;
+            
+            font-style: oblique;
+            font-size: large
+        }
+        #calc {
+            
+            
+            font-style: oblique;
+            font-size: medium;
+            
+        }
+        #output {
+            font-style: oblique;
+            font-size: medium;
+            background-color: bisque;
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1> CALCULATOR IS READY ! </h1>
+<div>
+    <form>
+    <input type="text" id="input1" placeholder="first number"/> 
+        <select id="process">
+            <option value="+">+ </option>
+            <option value="*">* </option>
+            <option value="-">- </option>
+            <option value="/">/</option>
+            </select>
+            <input type="text" id="input2" placeholder ="second number"/> 
+            <input type="button" id="calc" onclick="calculate()" value="CHECK YOUR ANSWER"/>
+            <input type="text" id="output" disabled value="result"/>
+           </form>
+    
+    <div id="error">
+    </div>
+</div>
+<script src="if.js">
+    
+</script>
+
+</body>
+</html>
