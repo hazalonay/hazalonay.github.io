@@ -1,27 +1,102 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
     <head>
-        <title>For Continued</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
+
+        <title>JSON Array</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="orc.js"></script>
         <style>
-            .b {
-                position:absolute; 
-                width:100px; 
-                height:100px; 
-                background-color:crimson;
-                text-align: center;
-                 
+            #avg {
+                color:brown;
+                text-align:  center;
+                font-size: larger;
+                font-family: monospace;
+                font-style:italic; 
+                                
+                    
             }
+           #table 
+           {
+               position:absolute;
+               top: 5%;
+               margin:2%;
+               left:45%;
+               
+                   
+           }
+           #sbl {
+               text-align: center;
+               font-style:italic;
+               font-size: larger;
+               color :darkred;
+
+           }
+           td {
+               text-align: center;
+           }
         </style>
     </head>
     <body>
+        <form>
+            <table style="width: 100%" border="1">
+            <tr>
+                <td id="sbl"> NAME </td>
+                <td id="sbl"> AGE </td>
+                <td id="sbl"> HEIGHT </td> </tr>
+             <tr>
+                <td> HAZAL </td>
+                <td> 21 </td>
+                <td> 175 CM </td> </tr>
+              <tr>
+                <td> TUANA </td>
+                <td> 8 </td>
+                <td> 135 CM </td> </tr>
+               <tr>
+                <td> RÜZGAR </td>
+                <td> 4 </td>
+                <td> 100 CM </td> </tr>
+            
+            </table>
+        </form>
         
-        <div id="disp">
+        <div id = "avg">
             
         </div>
+        
+        <script>
+            
+            var siblings = {siblings:[
+                    {"name":"rüzgar", "age":4, "height":100},
+                    {"name":"tuana", "age":8, "height":135},
+                    {"name":"hazal", "age":21, "height":175}]};
+            var avgAge = calcAvgAge(siblings);
+            $('#avg').append("Average age of siblings: " + avgAge + "<br>");
+            var avgHeight = calcAvgHeight(siblings);
+            $('#avg').append("Average height of siblings: " + avgHeight + "<br>");
+            
+            function calcAvgAge(obj){
+                var totalAge = 0;
+                for(var i = 0; i < obj.siblings.length; i++){
+                    totalAge += obj.siblings[i].age;
+                }
+                return totalAge / obj.siblings.length;
+            }
+            
+            function calcAvgHeight(obj){
+                var totalHeight = 0;
+                for(var i = 0; i < obj.siblings.length; i++){
+                    totalHeight += obj.siblings[i].height;
+                }
+                return totalHeight / obj.siblings.length;
+            }
+            
+        </script>
+        
     </body>
 </html>
