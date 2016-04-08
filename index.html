@@ -1,102 +1,82 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>        
-
-        <title>JSON Array</title>
+    <head>  
+        <title>Game</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <style>
-            #avg {
-                color:brown;
-                text-align:  center;
-                font-size: larger;
-                font-family: monospace;
-                font-style:italic; 
-                                
-                    
+            
+            ul
+            {
+                list-style-type: none;
             }
-           #table 
-           {
-               position:absolute;
-               top: 5%;
-               margin:2%;
-               left:45%;
-               
-                   
-           }
-           #sbl {
-               text-align: center;
-               font-style:italic;
-               font-size: larger;
-               color :darkred;
-
-           }
-           td {
-               text-align: center;
-           }
         </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+
+
+        
+
     </head>
     <body>
-        <form>
-            <table style="width: 100%" border="1">
-            <tr>
-                <td id="sbl"> NAME </td>
-                <td id="sbl"> AGE </td>
-                <td id="sbl"> HEIGHT </td> </tr>
-             <tr>
-                <td> HAZAL </td>
-                <td> 21 </td>
-                <td> 175 CM </td> </tr>
-              <tr>
-                <td> TUANA </td>
-                <td> 8 </td>
-                <td> 135 CM </td> </tr>
-               <tr>
-                <td> RÜZGAR </td>
-                <td> 4 </td>
-                <td> 100 CM </td> </tr>
-            
-            </table>
-        </form>
-        
-        <div id = "avg">
-            
+        <div>
+            <ul id="numName">
+                <li id="t1">eins</li>
+                <li id="t2">zwei</li>
+                <li id="t3">drei</li>
+                <li id="t4">vier</li>
+                <li id="t5">fünf</li>
+                <li id="t6">sechs</li>
+                <li id="t7">sieben</li>
+                <li id="t8">acht</li>
+                <li id="t9">neun</li>
+                <li id="t10">zehn</li>
+            </ul>
+            <ul id="numNumeric">
+                <li id="d1">1</li>
+                <li id="d2">2</li>
+                <li id="d3">3</li>
+                <li id="d4">4</li>
+                <li id="d5">5</li>
+                <li id="d6">6</li>
+                <li id="d7">7</li>
+                <li id="d8">8</li>
+                <li id="d9">9</li>
+                <li id="d10">10</li>
+            </ul>
         </div>
-        
-        <script>
-            
-            var siblings = {siblings:[
-                    {"name":"rüzgar", "age":4, "height":100},
-                    {"name":"tuana", "age":8, "height":135},
-                    {"name":"hazal", "age":21, "height":175}]};
-            var avgAge = calcAvgAge(siblings);
-            $('#avg').append("Average age of siblings: " + avgAge + "<br>");
-            var avgHeight = calcAvgHeight(siblings);
-            $('#avg').append("Average height of siblings: " + avgHeight + "<br>");
-            
-            function calcAvgAge(obj){
-                var totalAge = 0;
-                for(var i = 0; i < obj.siblings.length; i++){
-                    totalAge += obj.siblings[i].age;
-                }
-                return totalAge / obj.siblings.length;
-            }
-            
-            function calcAvgHeight(obj){
-                var totalHeight = 0;
-                for(var i = 0; i < obj.siblings.length; i++){
-                    totalHeight += obj.siblings[i].height;
-                }
-                return totalHeight / obj.siblings.length;
-            }
-            
-        </script>
-        
+        <script type="text/javascript">
+           var i=0;
+           for(var i=0; i<=10;i++)
+            $("#d" + i).draggable();
+              for(var i=0; i<=10;i++)
+                  
+            $("#t"+i).droppable({drop: function (event, ui) {
+                    var di = ui.draggable.attr("id");
+                   
+                    if (di === '#'+ di) {
+                       
+                        $("#d"+i).draggable("disable");
+                        $("#t"+i).html("&nbsp;").css("background-color", "green");
+                        
+                        
+                    }
+                }});
+//            
+            $.fn.randomize = function (selector) {
+                var $elems = selector ? $(this).find(selector) : $(this).children(),
+                        $parents = $elems.parent();
+                $parents.each(function () {
+                    $(this).children(selector).sort(function () {
+                        return Math.round(Math.random()) - 0.5;
+                        // }). remove().appendTo(this); // 2014-05-24: Removed `random` but leaving for reference. See notes under 'ANOTHER EDIT'
+                    }).detach().appendTo(this);
+                });
+                return this;
+            };
+            $('ul').randomize();
+           
+        </script>        
     </body>
 </html>
