@@ -1,69 +1,135 @@
-
 <html>
     <head>  
-        <title>Game</title>
+        <title>Game 1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
         <style>
+             body{
             
-            ul
-            {
+            background-size: cover;
+            z-index: 1;
+        }
+             
+            h1 {
+                color:purple;
+                 font-weight: bold;
+                 text-align: center;
+                font-family: sans-serif;
+            }
+            #numName {
+                color:crimson;
+                text-align: center;
+                font-family: sans-serif;
+                font-variant: historical-forms;
+                position: absolute;
+                left:42%;
+                top:20%;
+             border-style: groove;
+                border-width: 10px;
+                border-top-color: darksalmon;
+                border-bottom-color: maroon;
+                border-left-color: tomato;
+                border-right-color: crimson;
+                font-weight: bold;
+            }
+            
+            #numNumeric {
+                border-style: groove;
+                border-width: 10px;
+                border-top-color: darksalmon;
+                border-bottom-color: maroon;
+                border-left-color: tomato;
+                border-right-color: crimson;
+                color: indigo;
+                text-align: center;
+                font-family: sans-serif;
+                font-variant: historical-forms;
+                position: absolute;
+                left:50%;
+                top:20%;
+                 font-weight: bold;
+            }
+            ul {
                 list-style-type: none;
+            }
+            #order {
+                display: none;
             }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-
-
-
-        
-
+        <link rel="stylesheet" type="text/css" href="mystyle.css"> 
     </head>
-    <body>
+    <body background="https://lh3.ggpht.com/14C_cmmP4T6a_IGwNb3sz3c6gfYTWjuN4Ht0P-Qj1-U1YLnveMgn_uzSdXpAYyk1z_o=h900">
+            <embed src="KIDS MUSIC-Old MacDonald Had A Farm.mp3" hidden="true" autoostart="true" loop="true">
+            <h1> Ven Emparejamiento Juego <br>
+            Aprendo espanol...</h1>
         <div>
-            <ul id="numName">
-                <li id="t1">eins</li>
-                <li id="t2">zwei</li>
-                <li id="t3">drei</li>
-                <li id="t4">vier</li>
-                <li id="t5">fünf</li>
-                <li id="t6">sechs</li>
-                <li id="t7">sieben</li>
-                <li id="t8">acht</li>
-                <li id="t9">neun</li>
-                <li id="t10">zehn</li>
-            </ul>
-            <ul id="numNumeric">
-                <li id="d1">1</li>
-                <li id="d2">2</li>
-                <li id="d3">3</li>
-                <li id="d4">4</li>
-                <li id="d5">5</li>
-                <li id="d6">6</li>
-                <li id="d7">7</li>
-                <li id="d8">8</li>
-                <li id="d9">9</li>
-                <li id="d10">10</li>
-            </ul>
+              <ul id="numName"></ul> 
+              <ul id="numNumeric"></ul>
+                    <ul id="order"> </ul>
         </div>
         <script type="text/javascript">
-           var i=0;
-           for(var i=0; i<=10;i++)
-            $("#d" + i).draggable();
-              for(var i=0; i<=10;i++)
-                  
-            $("#t"+i).droppable({drop: function (event, ui) {
-                    var di = ui.draggable.attr("id");
-                   
-                    if (di === '#'+ di) {
-                       
-                        $("#d"+i).draggable("disable");
-                        $("#t"+i).html("&nbsp;").css("background-color", "green");
-                        
-                        
+            var numText = ['sero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez'];
+            //var numText = ['null', 'eins', 'zwei'];
+            var ulText = $('#numName');
+            var ulNum = $('#numNumeric');
+            var dimx = $('body').width();
+            var dimy = $('body').height();
+            for(var i = 0; i < numText.length; i++){
+                ulText.append('<li id="t' + (i) + '">' + numText[i] + '</li>');
+                ulNum.append('<li id="n' + (i) + '">' + (i) + '</li>');
+            }
+            var hidden = 0;
+            for(var i = 0; i < numText.length; i++){
+                $("#n" + i).data("index", {index: i});
+                $("#t" + i).data("index", {index: i});
+                $("#n" + i).draggable();
+                $("#t" + i).droppable({drop: function (event, ui) {
+                    var ni = ui.draggable.attr("id");
+                    var ti = this.id;
+                    var niElem = $('#' + ni);
+                    var tiElem = $('#' + ti);
+                    if(niElem.data("index").index === tiElem.data("index").index){
+                        //correct
+                        niElem.draggable("disable");
+                        niElem.css("display", "none");
+                        hidden++;
+//                        var hidden = 0;
+//                        for(var j = 0; j < numText.length; j++){
+//                            if($('#n' + j).css("display") === "none")
+//                                hidden++;
+//                        }
+                        if(hidden === numText.length){
+//                            alert("done");
+                            $('ul').randomize();
+                            $('#numName').sortable({
+                                start: function(event, ui){
+//                                    var startPos = ui.item.index();
+//                                    ui.item.data('startPos', startPos);
+                                },
+                                update: function(event, ui){
+//                                    var startPos = ui.item.data('startPos');
+//                                    var endPos = ui.item.index();
+                                    var ordered = 0;
+                                    for(var j = 0; j < numText.length; j++){
+                                        if($('#t' + j).index() === j)
+                                            ordered++;
+                                    }
+                                    if(ordered === numText.length)
+                                        alert("done");
+                                }
+                            });
+                        }
+                    } else{
+                        //wrong
+                        var left = Math.floor((Math.random() * (dimx - 20)) + 10);
+                        var top = Math.floor((Math.random() * (dimy - 20)) + 10);
+                        niElem.css("left", left+"px"); 
+                        niElem.css("top", top+"px");
                     }
                 }});
-//            
+            }
             $.fn.randomize = function (selector) {
                 var $elems = selector ? $(this).find(selector) : $(this).children(),
                         $parents = $elems.parent();
@@ -76,7 +142,6 @@
                 return this;
             };
             $('ul').randomize();
-           
         </script>        
     </body>
 </html>
